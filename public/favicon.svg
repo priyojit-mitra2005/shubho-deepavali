@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="diyaGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FF9D38" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#8E1729" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8E1729" />
+      <stop offset="30%" stop-color="#FF4500" />
+      <stop offset="70%" stop-color="#FFA500" />
+      <stop offset="100%" stop-color="#FFFACD" />
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF69" />
+      <stop offset="50%" stop-color="#8E1729" />
+      <stop offset="100%" stop-color="#4A0E17" />
+    </linearGradient>
+  </defs>
+  <!-- Aura glow -->
+  <circle cx="32" cy="26" r="22" fill="url(#diyaGlow)" />
+  <!-- Flame -->
+  <path d="M32 6 C35 15, 41 22, 38 29 C36 34, 28 34, 26 29 C23 22, 29 15, 32 6 Z" fill="url(#flameGrad)" />
+  <!-- Inner Flame Core -->
+  <ellipse cx="32" cy="27" rx="2.5" ry="5" fill="#67E8F9" opacity="0.85" />
+  <!-- Earthen Diya base -->
+  <path d="M12 36 C12 48, 52 48, 52 36 C52 34, 48 33, 32 33 C16 33, 12 34, 12 36 Z" fill="url(#clayGrad)" stroke="#D4AF69" stroke-width="1.5" />
+  <!-- Diya Rim pattern -->
+  <path d="M16 36 Q32 40 48 36" stroke="#FFC46B" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+  <ellipse cx="32" cy="46" rx="10" ry="2" fill="#D4AF69" opacity="0.5" />
+</svg>
+

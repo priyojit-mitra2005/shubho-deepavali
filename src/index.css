@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-midnight: #08070D;
+  --color-deep-blue: #10162D;
+  --color-royal-purple: #32134F;
+  --color-crimson: #8E1729;
+  --color-gold: #D4AF69;
+  --color-gold-light: #F3E5AB;
+  --color-saffron: #FF9D38;
+  --color-diya-glow: #FFC46B;
+}
+
+body {
+  font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-midnight);
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+.font-bengali-title {
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+.font-bengali {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Diya realistic flame flickering animation */
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) translate(0, 0) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 16px rgba(255, 170, 51, 0.9)) drop-shadow(0 -4px 10px rgba(255, 77, 0, 0.7));
+  }
+  25% {
+    transform: scale(1.04, 1.1) translate(-1px, -2px) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(255, 187, 85, 1)) drop-shadow(0 -6px 14px rgba(255, 102, 0, 0.8));
+  }
+  50% {
+    transform: scale(0.96, 0.98) translate(1px, 0.5px) rotate(-1.5deg);
+    opacity: 0.92;
+    filter: drop-shadow(0 0 14px rgba(255, 160, 40, 0.85)) drop-shadow(0 -3px 8px rgba(255, 60, 0, 0.65));
+  }
+  75% {
+    transform: scale(1.02, 1.05) translate(0.5px, -1px) rotate(1.5deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 20px rgba(255, 195, 90, 0.95)) drop-shadow(0 -5px 12px rgba(255, 90, 0, 0.75));
+  }
+}
+
+.animate-flame {
+  animation: flame-flicker 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Diya ignition spark transition animation */
+@keyframes ignition-spark {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+    filter: brightness(2) drop-shadow(0 0 4px #FFF);
+  }
+  40% {
+    transform: scale(1.4) translateY(-4px);
+    opacity: 1;
+    filter: brightness(2.5) drop-shadow(0 0 25px #FF9D38);
+  }
+  70% {
+    transform: scale(0.9) translateY(0);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-ignition {
+  animation: ignition-spark 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: bottom center;
+}
+
+/* Golden light reveal shimmer for headlines */
+@keyframes gold-light-reveal {
+  0% {
+    background-position: -200% center;
+    opacity: 0.85;
+    text-shadow: 0 0 0 rgba(255, 196, 107, 0);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 35px rgba(255, 196, 107, 0.7), 0 0 60px rgba(212, 175, 105, 0.4);
+  }
+  100% {
+    background-position: 200% center;
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 196, 107, 0.3);
+  }
+}
+
+.animate-light-reveal {
+  background: linear-gradient(
+    90deg,
+    #D4AF69 0%,
+    #FFF1C5 25%,
+    #FFC46B 50%,
+    #FFF1C5 75%,
+    #D4AF69 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-light-reveal 6s ease-in-out infinite;
+}
+
+/* Subtle sacred aura glow */
+@keyframes aura-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+.animate-aura {
+  animation: aura-pulse 4s ease-in-out infinite;
+}
+
+/* Star twinkle */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+.animate-star {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+/* Gold text gradient effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1C5 0%, #D4AF69 50%, #A67C37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-crimson-gradient {
+  background: linear-gradient(135deg, #FF6B81 0%, #E63946 50%, #8E1729 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Traditional Bengali ornamental border */
+.border-gold-ornate {
+  border-image: linear-gradient(to right, #D4AF69, #FFC46B, #8E1729, #D4AF69) 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08070D;
+}
+::-webkit-scrollbar-thumb {
+  background: #32134F;
+  border-radius: 4px;
+  border: 1px solid #D4AF69;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8E1729;
+}
+
+/* Accessibility: Respect user reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "আলোর উৎসব – Shubho Deepavali",
+  "description": "একটি নান্দনিক উৎসবের ওয়েবসাইট – Celebrating Indian Diwali and Bengali Kali Puja with virtual diya lighting, prayers to Maa Kali, cultural heritage, and personalized greetings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
