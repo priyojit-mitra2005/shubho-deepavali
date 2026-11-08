@@ -1,5 +1,6 @@
 # 🪔 শুভ দীপাবলি ও শ্যামাপূজা
 ### Shubho Deepavali — The Magic of Bengali Kali Puja
+<img width="1325" height="737" alt="image" src="https://github.com/user-attachments/assets/82d553d6-8edf-4ace-870e-62315a5759ec" />
 
 <p align="center">
   <strong>A Cinematic Celebration of Light, Devotion, Culture & Togetherness</strong>
